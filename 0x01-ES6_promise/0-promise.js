@@ -1,10 +1,15 @@
 function getResponseFromAPI() {
   return new Promise((resolve, reject) => {
-    // Simulate an API call
+    // Simulating an API call
     setTimeout(() => {
-      const data = { message: 'Success' };
-      resolve(data); // Resolve with data on success
-    }, 1000); // Simulate a 1-second delay
+      const success = true; // You can change this to false to simulate a failed API call
+
+      if (success) {
+        resolve('API response data');
+      } else {
+        reject(new Error('API call failed'));
+      }
+    }, 1000); // Simulating a delay of 1 second
   });
 }
 
